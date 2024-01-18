@@ -1,0 +1,1 @@
+<?php header("Location: https://www.dictionnaire-academie.fr/article/A9C3342"); ?>
