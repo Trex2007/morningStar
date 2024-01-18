@@ -11,4 +11,8 @@
         $title = "Accueil";
         $template = "Views/pageAccueil.php";
         require_once("views/base.php");
+    } elseif ($uri === "/Epopee" || $uri === "/EpopeeTemporelle"){
+        $title = "Epopee Temporelle";
+        $template = "Views/Epopee.php";
+        require_once("views/base.php");
     } 

@@ -106,7 +106,9 @@
 
     --menuOnOFF : 0px ;
     --menuIcone : -80px ;
-    --menubutton : -215px ;
+    --menubuttonAcc : -215px ;
+    --menubuttonEpp : -212px ;
+    --menubuttonChr : -223px ;
     --menubuttonSeCo : -250px ;
     --iconeOpacity : 0% ;
     --waitLonger : 1.1s;
@@ -142,26 +144,33 @@
 .menu div {
   position: fixed;
   display: flex;
-  transition: all var(--waitLonger2);
   width: 200px;
-  left: var(--menubutton);
   height: 40px;
   top: 25%;
 }
+.menu .butMen1 {
+  top: 25%;
+  left: var(--menubuttonAcc);
+  transition: all var(--waitLonger2);
+}
 .menu .butMen2 {
   top: 35%;
+  left: var(--menubuttonEpp);
   transition: all var(--waitLonger3);
 }
 .menu .butMen3 {
   top: 45%;
+  left: var(--menubuttonChr);
   transition: all var(--waitLonger4);
 }
 .menu .butMen4 {
   top: 55%;
+  left: var(--menubuttonAcc);
   transition: all var(--waitLonger5);
 }
 .menu .butMen5 {
   top: 65%;
+  left: var(--menubuttonAcc);
   transition: all var(--waitLonger6);
 }
 .menu button {
@@ -206,9 +215,6 @@
 }
 .menu .butMen6 {
   left: var(--menubuttonSeCo);
-}
-
-.menu .butMen6 {
   top: 92%;
   transition: all var(--waitLonger7);
 }
@@ -294,13 +300,16 @@ main{
   font-family: Hotdog;
   margin: 0% 5% 0% 4%;
 }
-
+.maincases{
+  height: 100%;
+}
 .debMain{
   background-color: #11111130;
   padding: 1% 3% 2% 3%;
   border-radius: 50px;
   width: 50%;
   margin: 1%;
+  height: 100%;
 }
 
 .debMainEpp{

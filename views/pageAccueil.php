@@ -2,7 +2,7 @@
     <p><?= $userNom->userID ?></p>
 <?php endforeach ?> -->
 
-<div class="flex">
+<div class="flex maincases">
     <div>
         <div class="debMainEpp">
             <h1>Epopee temporelle</h1>
@@ -33,6 +33,9 @@
                     </button>
                 </a>
             </div>
+        </div>
+        <div class="debMainEpp">
+            
         </div>
     </div>
     <div class="debMain">
