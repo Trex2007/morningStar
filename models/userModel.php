@@ -56,3 +56,8 @@ function verifEmptyData()
         return false;
     }
 }
+
+function profileView()
+{
+    
+}

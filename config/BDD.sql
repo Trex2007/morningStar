@@ -16,9 +16,7 @@ CREATE TABLE user (
     userMdp varchar(30),
     userTel varchar(14),
     userPerm varchar(3),
-    optID int,
-    primary key (userID),
-    FOREIGN KEY (optID) REFERENCES options(optID)
+    primary key (userID)
 );
 CREATE TABLE chambres (
     chrID int NOT null auto_increment,
@@ -38,4 +36,12 @@ CREATE TABLE reservations (
     primary key (resID),
     FOREIGN KEY (userID) REFERENCES user(userID),
     FOREIGN KEY (chrID) REFERENCES chambres(chrID)
+);
+CREATE TABLE choixOpt (
+    ChOpID int NOT null auto_increment,
+    resID int,
+    optID int,
+    primary key (ChOpID),
+    FOREIGN KEY (resID) REFERENCES reservations(resID),
+    FOREIGN KEY (optID) REFERENCES options(optID)
 );

@@ -117,6 +117,9 @@
     --waitLonger4 : 1.2s;
     --waitLonger5 : 1.2s;
     --waitLonger6 : 1.2s;
+
+    --prenomEdit : relative;
+    --prenomEditInv : none;
 }
 /* Menu */
 .menu{
@@ -769,26 +772,63 @@ footer{
   box-shadow: none;
 }
 
-/* Page Erreur */
+/* Profil */
 
-.MidErrH{
-  text-align:  center;
-  font-size: 300%;
+.repEdit{
+  margin: 0% 0.5% 0 0;
 }
-.MidErrP{
-  margin: 2%;
-  font-size: larger;
+.repEdit h3{
+  display: var(--prenomEdit);
 }
-.MidErrLI{
-  margin: 2%;
-  font-size: larger;
+
+.margO{
+  margin: 0% 0.5% 0 0;
 }
-.MidErrHH{
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  font-size: small;
-  text-align: right;
+
+.edit-button {
+  margin-top: 0.2%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ecriture);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px --ecriture;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: var(--background);
+}
+
+.edit-button:hover {
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 217, 0);
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 /* Responsive */
@@ -818,4 +858,3 @@ footer{
     inset: 30px;
   }
 }
-

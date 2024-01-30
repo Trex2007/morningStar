@@ -29,6 +29,14 @@
         $title = "Register";
         $template = "Views/Users/register.php";
         require_once("views/baseLog.php");
+    } elseif ($uri === "/profile" || $uri === "/profil"){
+        if(isset($_SESSION['user'])){
+            $title = "Profile";
+            $template = "Views/Users/profile.php";
+            require_once("views/base.php");
+        } else{
+            header("location:/login");
+        }
     } elseif ($uri ==="/deconnexion") {
         session_destroy();
         header('Location:/home');

@@ -2,21 +2,13 @@
 
     $uri = $_SERVER['REQUEST_URI'];
     if ($uri === "/ph" || $uri === "/coquin"){
-        $title = "ph";
-        $template = "Views/troll/ph.php";
-        require_once("views/baseLog.php");
+        header("Location: https://i.imgflip.com/78581b.gif");
     } elseif ($uri === "/mc" || $uri === "/so2011"){
-        $title = "mc";
-        $template = "Views/troll/Mc.php";
-        require_once("views/baseLog.php");
+        header("Location: https://www.minecraft.net/fr-fr");
     } elseif ($uri === "/con" || $uri === "/conne"){
-        $title = "con";
-        $template = "Views/troll/con_.php";
-        require_once("views/baseLog.php");
+        header("Location: https://www.dictionnaire-academie.fr/article/A9C3342");
     } elseif ($uri === "/rick" || $uri === "/morty" || $uri === "/meme" || $uri === "/rickroll" || $uri === "/roll"){
-        $title = "RickRolled";
-        $template = "Views/troll/rick.php";
-        require_once("views/baseLog.php");
+        header("Location: https://static.wikia.nocookie.net/dirtybiologistan/images/5/58/Rickroll.gif/revision/latest?cb=20220620191052&path-prefix=fr");
     } elseif ($uri === "/cocorex" || $uri === "/cocorex666" || $uri === "/cocorex333"){
         $title = "Cocorex666";
         $template = "Views/troll/cocorex.php";
