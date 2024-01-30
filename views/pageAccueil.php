@@ -1,7 +1,3 @@
-<!-- <?php foreach ($user as $userNom) : ?>
-    <p><?= $userNom->userID ?></p>
-<?php endforeach ?> -->
-
 <div class="flex maincases">
     <div>
         <div class="debMainEpp">
@@ -39,7 +35,7 @@
         </div>
     </div>
     <div class="debMain">
-        <h1>Son histoire</h1>
+        <h1>Histoire</h1>
         <p>
         L'hotel Morning Stars est un établissement immersif situé dans le monde VRChat. Ce lieu de rêve et de divertissement.<br/><br/>
 

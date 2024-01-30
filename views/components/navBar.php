@@ -15,9 +15,15 @@
     <div class="butMen5">
         <a href="#"><button>Accueil</button></a>
     </div>
+    <?php if(!isset($_SESSION["user"])) : ?>
     <div class="butMen6">
         <a href="login"><button>Se connecter</button></a>
     </div>
+    <?php else : ?>
+    <div class="butMen6">
+        <a href="profil"><button>Profil</button></a>
+    </div>
+    <?php endif ?>
 </div>
     <div class="headLeft">
         <input type="checkbox" id="checkboxmenu">

@@ -5,26 +5,26 @@
 <div class="logReg">
     <div class="case">
         <h1>S'enregistrer</h1>
-        <form action="" method="">
+        <form action="/register" method="POST">
             <fieldset>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="Prenom" id="Prenom" required="">
+                    <input type="text" class="form__field" placeholder="Prenom" id="Prenom" name="userNom" required="">
                     <label for="Prenom" class="form__label">Prenom</label>
                 </div>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="Nom" id="Nom" required="">
+                    <input type="text" class="form__field" placeholder="Nom" id="Nom" name="userSurnom" required="">
                     <label for="Nom" class="form__label">nom</label>
                 </div>
                 <div class="form__group field">
-                    <input type="email" class="form__field" placeholder="email" id="email" required="">
+                    <input type="email" class="form__field" placeholder="email" id="email" name="userEmail" required="">
                     <label for="email" class="form__label">Email</label>
                 </div>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="mdp" id="mdp" required="">
+                    <input type="password" class="form__field" placeholder="mdp" id="mdp" name="userMdp" required="">
                     <label for="mdp" class="form__label">mots de passe</label>
                 </div>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="GSM" id="GSM" required="">
+                    <input type="text" class="form__field" placeholder="GSM" id="GSM" name="userTel" required="">
                     <label for="GSM" class="form__label">Telephone</label>
                 </div>
                 <div class="buttonCentrer">

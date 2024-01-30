@@ -5,18 +5,18 @@
 <div class="logReg">
     <div class="case">
         <h1>Se Connecter</h1>
-        <form action="" method="">
+        <form action="/login" method="POST">
             <fieldset>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="Prenom" required="">
+                    <input type="text" class="form__field" placeholder="Prenom" name="userNom" required="">
                     <label for="name" class="form__label">Prenom</label>
                 </div>
                 <div class="form__group field">
-                    <input type="email" class="form__field" placeholder="email" required="">
+                    <input type="email" class="form__field" placeholder="email" name="userEmail" required="">
                     <label for="email" class="form__label">Email</label>
                 </div>
                 <div class="form__group field">
-                    <input type="text" class="form__field" placeholder="mdp" required="">
+                    <input type="password" class="form__field" placeholder="mdp" name="userMdp" required="">
                     <label for="mdp" class="form__label">mots de passe</label>
                 </div>
                 <div class="buttonCentrer">

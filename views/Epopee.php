@@ -1,3 +1,5 @@
+<audio autoplay src="../assets/audio/epopTemp.mp3"></audio>
+
 <h2 class="epoph">1985 : l'hotel morning stars voit le jour</h2>
 
 <p class="epopP">"L'hotel morning stars" est un établissement de charme situé à San Francisco, en Californie. Il est inauguré en 1985 par les propriétaires originels, Leslie et Maurice Hawkins.

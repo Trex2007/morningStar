@@ -1,13 +1,35 @@
 <?php
 
+    require_once("Models/userModel.php");
+
     $uri = $_SERVER['REQUEST_URI'];
     if ($uri === "/login" || $uri === "/connexion")
     {
+        if(isset($_POST['userEmail'])){
+            $erreur=false;
+            if(connectUser($pdo)){
+                header('location:/home');
+            } else{
+                $erreur=true;
+            }
+        }
+
         $title = "Login";
         $template = "Views/Users/login.php";
         require_once("views/baseLog.php");
     } elseif ($uri === "/register" || $uri === "/enregistrement"){
+        if(isset($_POST['userNom'])){
+            $messageError = verifEmptyData();
+            if(!$messageError){
+                createUser($pdo);
+                header('location:/login');
+            }
+        }
+
         $title = "Register";
         $template = "Views/Users/register.php";
         require_once("views/baseLog.php");
+    } elseif ($uri ==="/deconnexion") {
+        session_destroy();
+        header('Location:/home');
     }
