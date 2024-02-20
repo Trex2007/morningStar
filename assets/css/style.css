@@ -262,6 +262,52 @@
   transition-duration: 400ms;
   transition-property: width, left;
 }
+.menu .butMen7 {
+  left: var(--menubuttonAcc);
+  top: 92%;
+  transition: all var(--waitLonger7);
+}
+
+.menu .butMen7 button {
+  position: relative;
+  font-family: Hotdog;
+  font-size: 25px;
+  color: rgb(5, 221, 250);
+  font-family: Hotdog;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.menu .butMen7 button:focus,
+.menu .butMen7 button:hover {
+  color: rgb(5, 160, 250);
+}
+
+.menu .butMen7 button:focus:after,
+.menu .butMen7 button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.menu .butMen7 button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 2.7cm;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(5, 160, 250);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 /* Body (toute la page) */
 
 body{
@@ -774,29 +820,103 @@ footer{
 
 /* Profil */
 
-.repEdit{
-  margin: 0% 0.5% 0 0;
+.editProfile{
+  width: 50%;
+  background-color: #0000004b;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 35px;
 }
-.repEdit h3{
-  display: var(--prenomEdit);
+.reservations{
+  width: 50%;
+  background-color: #0000004b;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 35px;
+}
+.buttonsDecoEdit{
+  justify-content: space-between;
 }
 
-.margO{
-  margin: 0% 0.5% 0 0;
-}
+/* Button logout*/
 
-.edit-button {
-  margin-top: 0.2%;
-  width: 20px;
-  height: 20px;
+.BtnLogout{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 40px;
+  height: 40px;
+  border: none;
   border-radius: 50%;
-  background-color: var(--ecriture);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 69, 69);
+}
+
+.BtnLogout .sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BtnLogout .sign svg {
+  width: 18px;
+}
+
+.BtnLogout .sign svg path {
+  fill: black;
+}
+
+.BtnLogout .text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: black;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+.BtnLogout:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.BtnLogout:hover .sign {
+  width: 10%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+
+.BtnLogout:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+
+.BtnLogout:active {
+  transform: translate(2px, 2px);
+}
+/* edit button */
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: RGB(29, 185, 84);
   border: none;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 20px --ecriture;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
@@ -810,13 +930,14 @@ footer{
 }
 
 .edit-svgIcon path {
-  fill: var(--background);
+  fill: rgb(0, 0, 0);
 }
 
 .edit-button:hover {
+  width: 120px;
   border-radius: 50px;
   transition-duration: 0.3s;
-  background-color: rgb(255, 217, 0);
+  background-color: RGB(29, 185, 84);
   align-items: center;
 }
 
@@ -830,6 +951,63 @@ footer{
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: rgb(0, 0, 0);
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 17px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+
+/* Inputs*/
+
+.inputsEdit{
+  margin: 1%;
+}
+.inputsEdit label{
+  font-size: x-large;
+  margin: 0.2%;
+}
+
+.usernamelabel {
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 5px 5px;
+}
+
+#usernameField {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background-color: #292929;
+  border-radius: 30px;
+  border: 2px solid #292929;
+  padding: 0px 12px;
+  outline: none;
+  caret-color: rgb(152, 88, 255);
+  color: rgb(212, 212, 212);
+  font-size: 18px;
+  transition-duration: .2s;
+}
+
+#usernameField:focus,
+#usernameField:valid {
+  border: 2px solid rgb(152, 88, 255);
+  transition-duration: .2s;
+}
+
+
 
 /* Responsive */
 
@@ -847,6 +1025,9 @@ footer{
   
   .mineBas{
     bottom: 3px;
+  }
+  .PreEdith3{
+    margin: 0% 0.5% 0 -15px;
   }
 }
 @media screen and (max-width: 600px) {

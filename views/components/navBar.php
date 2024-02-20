@@ -20,7 +20,7 @@
         <a href="login"><button>Se connecter</button></a>
     </div>
     <?php else : ?>
-    <div class="butMen6">
+    <div class="butMen7">
         <a href="profil"><button>Profil</button></a>
     </div>
     <?php endif ?>

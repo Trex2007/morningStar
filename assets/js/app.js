@@ -1,17 +1,14 @@
+let tab = ['--menuOnOFF', '--menuIcone', '--menubuttonAcc', '--menubuttonEpp', '--menubuttonChr', '--menubuttonSeCo', '--iconeOpacity', '--waitLonger', '--waitLonger2', '--waitLonger3', '--waitLonger4', '--waitLonger5', '--waitLonger6', '--waitLonger7']
+let data = ['300px', '220px', '85px', '88px', '73px', '50px', '100%', '1.1s', '1.2s', '1.3s', '1.4s', '1.5s', '1.6s', '1.7s']
+let data2 = ['0px', '-80px', '-215px', '-212px', '-223px', '-250px', '0%', '1s', '1s', '1s', '1s', '1s', '1s', '1s',]
+
+let tab2 = ['--background', '--ecriture', '--menubars', '--menuBackground', '--menuEcriture']
+let data3 = ['#f1f1f1', '#262626', '#111111', '#aaaaaa', '#111111']
+let data4 = ['#262626', '#f1f1f1', 'rgb(241, 221, 119)', '#111111', '#f1f1f1']
+
+
 const switchThemeBtn = document.querySelector('.slider')
 let toggleTheme = 0;
-
-let tab = ['--menuOnOFF', '--menuIcone', '--menubuttonAcc', '--menubuttonEpp', '--menubuttonChr', '--menubuttonSeCo', '--iconeOpacity', '--waitLonger', '--waitLonger2', '--waitLonger3', '--waitLonger4', '--waitLonger5', '--waitLonger6', '--waitLonger7'];
-let data = ['300px', '220px', '85px', '88px', '73px', '50px', '100%', '1.1s', '1.2s', '1.3s', '1.4s', '1.5s', '1.6s', '1.7s'];
-let data2 = ['0px', '-80px', '-215px', '-212px', '-223px', '-250px', '0%', '1s', '1s', '1s', '1s', '1s', '1s', '1s',];
-
-let tab2 = ['--background', '--ecriture', '--menubars', '--menuBackground', '--menuEcriture'];
-let data3 = ['#f1f1f1', '#262626', '#111111', '#aaaaaa', '#111111'];
-let data4 = ['#262626', '#f1f1f1', 'rgb(241, 221, 119)', '#111111', '#f1f1f1'];
-
-// let tab3 = ['', ''];
-// let data5 = ['', ''];
-// let data5 = ['', ''];
 
 switchThemeBtn.addEventListener('click', () => {
     if(toggleTheme === 0){
@@ -44,15 +41,24 @@ MenuOpen.addEventListener('click', () => {
     }
 });
 
+let tab3 = ['--prenomEdit', '--prenomEditInv']
+
+let data5 = ['none', 'relative']
+let data6 = ['relative', 'none']
+
 const PrenomEditTg = document.querySelector('.edit-button')
-let PrenomEdit = 0;
+let PrenomEditCnt = 0;
 
 PrenomEditTg.addEventListener('click', () => {
-    if(PrenomEdit === 0){
-        document.documentElement.style.setProperty('--prenomEdit','none') 
-        PrenomEdit++;
+    if(PrenomEditCnt === 0){
+        for (let index = 0; index < tab3.length; index++) {
+            document.documentElement.style.setProperty(tab3[index], data5[index])        
+        }
+        PrenomEditCnt++;
     } else{
-        document.documentElement.style.setProperty('--prenomEdit','relative') 
-        PrenomEdit--;
+        for (let index = 0; index < tab3.length; index++) {
+            document.documentElement.style.setProperty(tab3[index], data6[index])
+        }
+        PrenomEditCnt--;
     }
 })
