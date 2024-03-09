@@ -37,6 +37,18 @@
         } else{
             header("location:/login");
         }
+    } elseif ($uri ==="/updateProfil") {
+        if(isset($_POST['edit-button'])){
+            $messageError = verifEmptyData();
+
+            if(!$messageError) {
+                updateUser($pdo);
+                updateSession($pdo);
+                header('Location: /profile');
+            }
+            $title = "Mise à jour du profil";
+            $template = 'Views/Users/profil.php';
+        }
     } elseif ($uri ==="/deconnexion") {
         session_destroy();
         header('Location:/home');

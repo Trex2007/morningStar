@@ -3,20 +3,20 @@
         <h2>Bonjour <?=$_SESSION['user']->userNom?>, voici votre profil.</h2>
 
         <div class="flex inputsEdit">
-            <label for="usernameField" class="usernamelabel label">Prenom :</label>
-            <input type="text" placeholder="<?=$_SESSION['user']->userNom?>" id="usernameField" required="required">
+            <label for="Prenom" class="Prenom label">Prenom :</label>
+            <input type="text" placeholder="<?=$_SESSION['user']->userNom?>" id="Prenom" name="userNom" required="required">
         </div>
         <div class="flex inputsEdit">
-            <label for="usernameField" class="usernamelabel label">Nom :</label>
-            <input type="text" placeholder="<?=$_SESSION['user']->userSurnom?>" id="usernameField" required="required">
+            <label for="Nom" class="Nom label">Nom :</label>
+            <input type="text" placeholder="<?=$_SESSION['user']->userSurnom?>" id="Nom" name="userSurnom" required="required">
         </div>
         <div class="flex inputsEdit">
-            <label for="usernameField" class="usernamelabel label">MDP :</label>
-            <input type="text" placeholder="@" id="usernameField" required="required">
+            <label for="mdp" class="mdp label">MDP :</label>
+            <input type="text" placeholder="@" id="mdp" name="userMdp" required="required">
         </div>
         <div class="flex inputsEdit">
-            <label for="usernameField" class="usernamelabel label">Tel :</label>
-            <input type="text" placeholder="<?=$_SESSION['user']->userTel?>" id="usernameField" required="required">
+            <label for="GSM" class="GSM label">Tel :</label>
+            <input type="text" placeholder="<?=$_SESSION['user']->userTel?>" id="GSM" name="userTel" required="required">
         </div>
         
 

@@ -57,7 +57,35 @@ function verifEmptyData()
     }
 }
 
-function profileView()
+function updateUser($pdo)
 {
-    
+    try {
+        $query = 'update user set userNom :userNom, userSurnom = :userSurnom, userMDP = :userMdp, userTel = :userTel where id = :id';
+        $ajouteUser = $pdo->prepare($query);
+        $ajouteUser->execute{[
+            'userNom' => $_POST["userNom"],
+            'userSurnom' => $_POST["userSurnom"],
+            'userMDP' => $_POST["userMDP"],
+            'userTel' => $_POST["userTel"],
+            'id' => $_SESSION["user"]->id
+        ]};
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+function updateSession($pdo)
+{
+    try{
+        $query = 'select * from user where id = :id';
+        $selectUser = $pdo->prepare($query);
+        $selectUser->exeute([
+            'id'=>$_SESSION["user"] -> id
+        ]);
+        $user = $selectUser->fetch();
+        $_SESSION['user']= $user;
+    }catch(PDOException $e){
+        $message = $e-> getMessage();
+        die( $message);
+    }
 }
