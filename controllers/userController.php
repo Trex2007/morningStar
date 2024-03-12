@@ -44,7 +44,7 @@
             if(!$messageError) {
                 updateUser($pdo);
                 updateSession($pdo);
-                header('Location: /profile');
+                header('Location:/profile');
             }
             $title = "Mise à jour du profil";
             $template = 'Views/Users/profil.php';

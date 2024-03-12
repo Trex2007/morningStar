@@ -60,15 +60,15 @@ function verifEmptyData()
 function updateUser($pdo)
 {
     try {
-        $query = 'update user set userNom :userNom, userSurnom = :userSurnom, userMDP = :userMdp, userTel = :userTel where id = :id';
+        $query = 'update user set userNom = :userNom, userSurnom = :userSurnom, userMDP = :userMdp, userTel = :userTel where userID = :id';
         $ajouteUser = $pdo->prepare($query);
-        $ajouteUser->execute{[
+        $ajouteUser->execute([
             'userNom' => $_POST["userNom"],
             'userSurnom' => $_POST["userSurnom"],
             'userMDP' => $_POST["userMDP"],
             'userTel' => $_POST["userTel"],
-            'id' => $_SESSION["user"]->id
-        ]};
+            'userID' => $_SESSION["user"]->id
+        ]);
     } catch (PDOException $e) {
         $message = $e->getMessage();
         die($message);
@@ -77,10 +77,10 @@ function updateUser($pdo)
 function updateSession($pdo)
 {
     try{
-        $query = 'select * from user where id = :id';
+        $query = 'select * from user where userID = :id';
         $selectUser = $pdo->prepare($query);
         $selectUser->exeute([
-            'id'=>$_SESSION["user"] -> id
+            'userID'=>$_SESSION["user"] -> id
         ]);
         $user = $selectUser->fetch();
         $_SESSION['user']= $user;
