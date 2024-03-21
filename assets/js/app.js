@@ -40,25 +40,3 @@ MenuOpen.addEventListener('click', () => {
         MenuToggle--;
     }
 });
-
-let tab3 = ['--prenomEdit', '--prenomEditInv']
-
-let data5 = ['none', 'relative']
-let data6 = ['relative', 'none']
-
-const PrenomEditTg = document.querySelector('.edit-button')
-let PrenomEditCnt = 0;
-
-PrenomEditTg.addEventListener('click', () => {
-    if(PrenomEditCnt === 0){
-        for (let index = 0; index < tab3.length; index++) {
-            document.documentElement.style.setProperty(tab3[index], data5[index])        
-        }
-        PrenomEditCnt++;
-    } else{
-        for (let index = 0; index < tab3.length; index++) {
-            document.documentElement.style.setProperty(tab3[index], data6[index])
-        }
-        PrenomEditCnt--;
-    }
-})

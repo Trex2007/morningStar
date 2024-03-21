@@ -1,13 +1,13 @@
 <div class="menu">
     <img src="../../assets/images/H_Logo.png"/>
     <div class="butMen1">
-        <a href="index"><button>Accueil</button></a>
+        <a href="/"><button>Accueil</button></a>
     </div>
     <div class="butMen2">
         <a href="Epopee"><button>Epopee</button></a>
     </div>
     <div class="butMen3">
-        <a href="#"><button>Chambres</button></a>
+        <a href="/Chambres"><button>Chambres</button></a>
     </div>
     <div class="butMen4">
         <a href="#"><button>Accueil</button></a>

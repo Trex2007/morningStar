@@ -5,7 +5,7 @@
 <div class="logReg">
     <div class="case">
         <h1>Se Connecter</h1>
-        <form action="/login" method="POST">
+        <form action="" method="POST">
             <fieldset>
                 <div class="form__group field">
                     <input type="text" class="form__field" placeholder="Prenom" name="userNom" required="">

@@ -47,7 +47,7 @@ function verifEmptyData()
 {
     foreach ($_POST as $key => $value) {
         if (empty(str_replace(' ', '', $value))){
-            $messageError[$key] = "votre " .$key . " est vide.";
+            $messageError[$key] = "Votre " .$key . " est vide.";
         }
     }
     if (isset($messageError)) {
@@ -60,14 +60,14 @@ function verifEmptyData()
 function updateUser($pdo)
 {
     try {
-        $query = 'update user set userNom = :userNom, userSurnom = :userSurnom, userMDP = :userMdp, userTel = :userTel where userID = :id';
+        $query = 'update user set userNom = :userNom, userSurnom = :userSurnom, userMdp = :userMdp, userTel = :userTel where userID = :userID';
         $ajouteUser = $pdo->prepare($query);
         $ajouteUser->execute([
             'userNom' => $_POST["userNom"],
             'userSurnom' => $_POST["userSurnom"],
-            'userMDP' => $_POST["userMDP"],
+            'userMdp' => $_POST["userMdp"],
             'userTel' => $_POST["userTel"],
-            'userID' => $_SESSION["user"]->id
+            'userID' => $_SESSION["user"] -> userID
         ]);
     } catch (PDOException $e) {
         $message = $e->getMessage();
@@ -77,10 +77,10 @@ function updateUser($pdo)
 function updateSession($pdo)
 {
     try{
-        $query = 'select * from user where userID = :id';
+        $query = 'select * from user where userID = :userID';
         $selectUser = $pdo->prepare($query);
-        $selectUser->exeute([
-            'userID'=>$_SESSION["user"] -> id
+        $selectUser->execute([
+            'userID'=>$_SESSION["user"] -> userID
         ]);
         $user = $selectUser->fetch();
         $_SESSION['user']= $user;

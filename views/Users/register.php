@@ -5,7 +5,7 @@
 <div class="logReg">
     <div class="case">
         <h1>S'enregistrer</h1>
-        <form action="/register" method="POST">
+        <form action="" method="POST">
             <fieldset>
                 <div class="form__group field">
                     <input type="text" class="form__field" placeholder="Prenom" id="Prenom" name="userNom" required="">
