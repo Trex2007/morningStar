@@ -3,6 +3,7 @@
     require_once("Models/userModel.php");
 
     $uri = $_SERVER['REQUEST_URI'];
+
     if ($uri === "/login" || $uri === "/connexion")
     {
         if(isset($_POST['userEmail'])){
@@ -30,6 +31,8 @@
         $template = "Views/Users/register.php";
         require_once("views/baseLog.php");
     } elseif ($uri === "/profile" || $uri === "/profil"){
+        $users = SelectAllUsers($pdo);
+
         if(isset($_SESSION['user'])){
 
             if(isset($_POST['edit-button'])){
@@ -42,8 +45,13 @@
             } else if (isset($_POST['decoo'])){
                 session_destroy();
                 header('Location:/home');
+            } else if(isset($_POST['suprr'])){
+                deleteOptionReservatonsFromUser($pdo);
+                deleteReservationsFromUser($pdo);
+                deleteUser($pdo);
+                session_destroy();
+                header('Location:/home');
             }
-
             $title = "Profile";
             $template = "Views/Users/profile.php";
             require_once("views/base.php");

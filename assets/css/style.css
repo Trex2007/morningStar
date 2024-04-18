@@ -107,8 +107,9 @@
     --menuOnOFF : 0px ;
     --menuIcone : -80px ;
     --menubuttonAcc : -215px ;
-    --menubuttonEpp : -212px ;
-    --menubuttonChr : -223px ;
+    --menubuttonMed : -210px ;
+    --menubuttonChr : -228px ;
+    --menubuttonCon : -224px;
     --menubuttonSeCo : -250px ;
     --iconeOpacity : 0% ;
     --waitLonger : 1.1s;
@@ -158,7 +159,7 @@
 }
 .menu .butMen2 {
   top: 35%;
-  left: var(--menubuttonEpp);
+  left: var(--menubuttonMed);
   transition: all var(--waitLonger3);
 }
 .menu .butMen3 {
@@ -168,7 +169,7 @@
 }
 .menu .butMen4 {
   top: 55%;
-  left: var(--menubuttonAcc);
+  left: var(--menubuttonCon);
   transition: all var(--waitLonger5);
 }
 .menu .butMen5 {
@@ -181,7 +182,6 @@
   font-family: Hotdog;
   font-size: 25px;
   color: var(--menuEcriture);
-  font-family: Hotdog;
   font-weight: 800;
   cursor: pointer;
   border: none;
@@ -227,7 +227,6 @@
   font-family: Hotdog;
   font-size: 25px;
   color: rgb(5, 221, 250);
-  font-family: Hotdog;
   font-weight: 800;
   cursor: pointer;
   border: none;
@@ -273,7 +272,6 @@
   font-family: Hotdog;
   font-size: 25px;
   color: rgb(5, 221, 250);
-  font-family: Hotdog;
   font-weight: 800;
   cursor: pointer;
   border: none;
@@ -314,6 +312,7 @@ body{
     background-color: var(--background);
     transition: all 0.4s;
     margin: 0;
+    color: var(--ecriture);
 }
 
 /* Header (haut de page) */
@@ -916,7 +915,6 @@ footer{
 }
 
 /* Profil */
-
 .editProfile{
   width: 50%;
 }
@@ -986,7 +984,7 @@ footer{
   font-size: 12px;
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
-}
+}s
 .editProfInput:hover{
   border: 2px solid rgb(138, 120, 29);
   -webkit-transition-duration: .2s;
@@ -1003,7 +1001,7 @@ footer{
 
 /* Button logout*/
 .BtnVert{
-  background-color: rgb(37, 161, 49);
+  background-color: rgb(67, 172, 46);
 }
 .BtnOrange{
   background-color: rgb(255, 144, 32);
@@ -1111,7 +1109,184 @@ footer{
   transition-duration: .2s;
 }
 
+/* réservations */
 
+.reservationCote{
+  width: 100%;
+  height: 700px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.reservationCase{
+
+  width: 29%;
+  margin: 1%;
+  height: 350px;
+  background-color: #ffffff1a;
+  border-radius: 20px;
+  padding: 1%;
+}
+.reservationCase h2{
+  margin: 0%;
+  text-align: center;
+}
+.reservationCase img{
+  width: 100%;
+  border-radius: 20px;
+}
+.listecoche{
+  width: 100%;
+}
+
+/* cartes PRR */
+
+.cardPRR {
+  margin: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.cardPRR strong{
+  color: #c4c4c4;
+}
+
+.cardPRR .hautPRR {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardPRR .title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #fff
+}
+
+.cardPRR .price {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff
+}
+
+.cardPRR .desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: rgba(156, 163, 175, 1);
+}
+
+.cardPRR .lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: rgba(156, 163, 175, 1);
+}
+
+.cardPRR .lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  margin-left: 0.5rem
+}
+
+.cardPRR .lists .list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: rgba(167, 139, 250, 1);
+}
+
+.cardPRR .action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(17, 24, 39, 1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.cardPRR .action:active {
+  font-size: larger;
+  padding-top: 0.515rem;
+  padding-bottom: 0.515rem;
+}
+
+.NuitPRR{
+  align-items: flex-end;
+}
+
+.valentinePRR {
+  background-color: rgba(84, 6, 73, 0.45);
+}
+.valentinePRR .lists .list svg {
+  color: rgb(244, 139, 250);
+}
+.valentinePRR .action {
+  background-color: rgb(244, 139, 250);
+}
+.valentinePRR .action:hover {
+  background-color: rgb(194, 84, 190);
+}
+
+.FunPRR{
+  background-color: rgba(63, 64, 6, 0.45);
+}
+.FunPRR .lists .list svg {
+  color: rgb(236, 236, 67);
+}
+.FunPRR .action {
+  background-color: rgb(236, 236, 67);
+}
+.FunPRR .action:hover {
+  background-color: rgb(202, 202, 41);
+}
+
+.LowCostPRR{
+  background-color: rgba(24, 135, 39, 0.253);
+}
+.LowCostPRR .lists .list svg {
+  color: rgb(41, 194, 62);
+}
+.LowCostPRR .action {
+  background-color: rgb(41, 194, 62);
+}
+.LowCostPRR .action:hover {
+  background-color: rgb(28, 158, 45);
+}
+
+/* ADMIN MODE */
+
+.ADMINMODEBUTTON{
+  width: 140px;
+}
+
+.userCote{
+  width: 100%;
+  height: 700px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.userCase{
+  width: 45%;
+  margin: 1%;
+  height: 230px;
+  background-color: #ffffff1a;
+  border-radius: 20px;
+  padding: 1%;
+}
 
 /* Responsive */
 
@@ -1142,4 +1317,23 @@ footer{
   .loader::before {
     inset: 30px;
   }
+}
+
+/* scroll bar */
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d6cc0f; 
 }

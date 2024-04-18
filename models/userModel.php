@@ -89,3 +89,54 @@ function updateSession($pdo)
         die( $message);
     }
 }
+function deleteOptionReservatonsFromUser($dbh)
+{
+    try {
+        $query = 'delete from choixOpt where resID in (select resID from reservations where userID = :userID)';
+        $deleteAllUserFromId = $dbh->prepare($query);
+        $deleteAllUserFromId->execute([
+            'userID' => $_SESSION["user"] -> userID
+        ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+function deleteReservationsFromUser($dbh)
+{
+    try {
+        $query = 'delete from reservations where userID = :userID';
+        $deleteAllUserFromId = $dbh->prepare($query);
+        $deleteAllUserFromId->execute([
+            'userID' => $_SESSION["user"] -> userID
+        ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+function deleteUser($dbh)
+{
+    try {
+        $query = 'delete from user where userID = :userID';
+        $deleteAllUserFromId = $dbh->prepare($query);
+        $deleteAllUserFromId->execute([
+            'userID' => $_SESSION["user"] -> userID
+        ]);
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}
+function SelectAllUsers($pdo){
+    try {
+        $query = "select * from user";
+        $selectUser = $pdo->prepare($query);
+        $selectUser->execute();
+        $users = $selectUser->fetchAll();
+        return $users;
+    } catch (PDOException $e) {
+        $message = $e->getMessage();
+        die($message);
+    }
+}

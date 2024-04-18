@@ -1,47 +1,43 @@
-CREATE TABLE options (
-    optID int NOT null auto_increment,
-    optPiscine bool,
-    optBar bool,
-    optRest bool,
-    optCiner bool,
-    optJardin bool,
-    optPntHouse bool,
-    primary key (optID)
-);
-CREATE TABLE user (
-    userID int NOT null auto_increment,
-    userNom varchar(20),
-    userSurnom varchar(30),
-    userEmail varchar(100),
-    userMdp varchar(30),
-    userTel varchar(14),
-    userPerm varchar(3),
-    primary key (userID)
-);
-CREATE TABLE chambres (
-    chrID int NOT null auto_increment,
-    chrPlaces int,
-    chrTV bool,
-    chrWifi bool,
-    chrTaille int,
-    chrService bool,
-    primary key (chrID)
-);
-CREATE TABLE reservations (
-    resID int NOT null auto_increment,
-    resDateDeb date,
-    resDateFin date,
-    userID int,
-    chrID int,
-    primary key (resID),
-    FOREIGN KEY (userID) REFERENCES user(userID),
-    FOREIGN KEY (chrID) REFERENCES chambres(chrID)
-);
-CREATE TABLE choixOpt (
-    ChOpID int NOT null auto_increment,
-    resID int,
-    optID int,
-    primary key (ChOpID),
-    FOREIGN KEY (resID) REFERENCES reservations(resID),
-    FOREIGN KEY (optID) REFERENCES options(optID)
+CREATE TABLE OPTIONS(
+    optID INT NOT NULL AUTO_INCREMENT,
+    optPiscine TINYINT(1) DEFAULT 0,
+    optBar TINYINT(1) DEFAULT 0,
+    optRest TINYINT(1) DEFAULT 0,
+    optCiner TINYINT(1) DEFAULT 0,
+    optJardin TINYINT(1) DEFAULT 0,
+    optPntHouse TINYINT(1) DEFAULT 0,
+    PRIMARY KEY(optID)
+); CREATE TABLE USER(
+    userID INT NOT NULL AUTO_INCREMENT,
+    userNom VARCHAR(20),
+    userSurnom VARCHAR(30),
+    userEmail VARCHAR(100),
+    userMdp VARCHAR(30),
+    userTel VARCHAR(14),
+    userPerm VARCHAR(3),
+    PRIMARY KEY(userID)
+); CREATE TABLE chambres(
+    chrID INT NOT NULL AUTO_INCREMENT,
+    chrPlaces INT,
+    chrTV TINYINT(1) DEFAULT 0,
+    chrWifi TINYINT(1) DEFAULT 0,
+    chrTaille INT,
+    chrService TINYINT(1) DEFAULT 0,
+    PRIMARY KEY(chrID)
+); CREATE TABLE reservations(
+    resID INT NOT NULL AUTO_INCREMENT,
+    resDateDeb DATE,
+    resDateFin DATE,
+    userID INT,
+    chrID INT,
+    PRIMARY KEY(resID),
+    FOREIGN KEY(userID) REFERENCES USER(userID),
+    FOREIGN KEY(chrID) REFERENCES chambres(chrID)
+); CREATE TABLE choixOpt(
+    ChOpID INT NOT NULL AUTO_INCREMENT,
+    resID INT,
+    optID INT,
+    PRIMARY KEY(ChOpID),
+    FOREIGN KEY(resID) REFERENCES reservations(resID),
+    FOREIGN KEY(optID) REFERENCES OPTIONS(optID)
 );

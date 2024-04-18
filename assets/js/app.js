@@ -1,6 +1,6 @@
-let tab = ['--menuOnOFF', '--menuIcone', '--menubuttonAcc', '--menubuttonEpp', '--menubuttonChr', '--menubuttonSeCo', '--iconeOpacity', '--waitLonger', '--waitLonger2', '--waitLonger3', '--waitLonger4', '--waitLonger5', '--waitLonger6', '--waitLonger7']
-let data = ['300px', '220px', '85px', '88px', '73px', '50px', '100%', '1.1s', '1.2s', '1.3s', '1.4s', '1.5s', '1.6s', '1.7s']
-let data2 = ['0px', '-80px', '-215px', '-212px', '-223px', '-250px', '0%', '1s', '1s', '1s', '1s', '1s', '1s', '1s',]
+let tab = ['--menuOnOFF', '--menuIcone', '--menubuttonAcc', '--menubuttonMed', '--menubuttonChr', '--menubuttonCon','--menubuttonSeCo', '--iconeOpacity', '--waitLonger', '--waitLonger2', '--waitLonger3', '--waitLonger4', '--waitLonger5', '--waitLonger6', '--waitLonger7']
+let data = ['300px', '220px', '85px', '92px', '68px', '72px','52px', '100%', '1.1s', '1.2s', '1.3s', '1.4s', '1.5s', '1.6s', '1.7s']
+let data2 = ['0px', '-80px', '-215px', '-212px', '-228px', '-224px','-250px', '0%', '1s', '1s', '1s', '1s', '1s', '1s', '1s',]
 
 let tab2 = ['--background', '--ecriture', '--menubars', '--menuBackground', '--menuEcriture']
 let data3 = ['#f1f1f1', '#262626', '#111111', '#aaaaaa', '#111111']

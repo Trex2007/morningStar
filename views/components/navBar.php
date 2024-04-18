@@ -4,24 +4,29 @@
         <a href="/"><button>Accueil</button></a>
     </div>
     <div class="butMen2">
-        <a href="Epopee"><button>Epopee</button></a>
+        <a href="/media"><button>Media</button></a>
     </div>
     <div class="butMen3">
         <a href="/Chambres"><button>Chambres</button></a>
     </div>
     <div class="butMen4">
-        <a href="#"><button>Accueil</button></a>
+        <a href="/contact"><button>Contact</button></a>
     </div>
     <div class="butMen5">
-        <a href="#"><button>Accueil</button></a>
+        <a href="/Vrchat"><button>Vrchat</button></a>
     </div>
     <?php if(!isset($_SESSION["user"])) : ?>
     <div class="butMen6">
         <a href="login"><button>Se connecter</button></a>
     </div>
-    <?php else : ?>
+    <?php elseif($_SESSION["user"]->userPerm === "own") :?>
     <div class="butMen7">
+        <a href="profil"><button>ADMIN</button></a>
+    </div>
+    <?php else : ?>
+        <div class="butMen7">
         <a href="profil"><button>Profil</button></a>
+        
     </div>
     <?php endif ?>
 </div>
@@ -34,7 +39,7 @@
         </label>
     </div>
     <div class="headCenter">
-        <h1>Morning Stars</h1>
+        <h1>Morning Star</h1>
     </div>
     <div class="headRight">
         <label class="switchlight">
