@@ -916,9 +916,8 @@ footer{
 
 /* Profil */
 .editProfile{
-  width: 50%;
-}
-.editOne{
+  margin-top: 5%;
+  width: 90%;
   background-color: #0000004b;
   border-radius: 35px;
   padding: 1% 1% 1% 1.5%;
@@ -1138,135 +1137,164 @@ footer{
   width: 100%;
 }
 
-/* cartes PRR */
+/* reservations */
 
-.cardPRR {
-  margin: 1%;
+.reservations{
+  width: 90%;
+  height: 90%;
+  margin:  5%;
+}
+.inteRes img{
+ width: 200%;
+ margin: 1%;
+ border-radius: 30px;
+ box-shadow: 0px 0px 3px white;
+}
+.texteChoix{
+  margin: 2% 1% 1% 1%;
+ }
+
+.btn-conteiner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-bottom: 2rem;
-  width: 320px;
+  justify-content: right;
+  --color-text: black;
+  --color-background: #f2d218;
+  --color-outline: #ff145b80;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
   display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  padding: 1.5rem;
-}
-.cardPRR strong{
-  color: #c4c4c4;
-}
-
-.cardPRR .hautPRR {
-  display: flex;
-  flex-direction: column;
-}
-
-.cardPRR .title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: #fff
-}
-
-.cardPRR .price {
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
-  color: #fff
-}
-
-.cardPRR .desc {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.625;
-  color: rgba(156, 163, 175, 1);
-}
-
-.cardPRR .lists {
-  margin-bottom: 1.5rem;
-  flex: 1 1 0%;
-  color: rgba(156, 163, 175, 1);
-}
-
-.cardPRR .lists .list {
-  margin-bottom: 0.5rem;
-  display: flex;
-  margin-left: 0.5rem
-}
-
-.cardPRR .lists .list svg {
-  height: 1.5rem;
-  width: 1.5rem;
-  flex-shrink: 0;
-  margin-right: 0.5rem;
-  color: rgba(167, 139, 250, 1);
-}
-
-.cardPRR .action {
-  border: none;
-  outline: none;
-  display: inline-block;
-  border-radius: 0.25rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  color: rgba(17, 24, 39, 1);
-  transition: all 0.3s;
+  font-size: 30px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: black;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: black;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+.checkmark {
+  top : 13px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.4s;
+  overflow: hidden;
   cursor: pointer;
-}
-.cardPRR .action:active {
-  font-size: larger;
-  padding-top: 0.515rem;
-  padding-bottom: 0.515rem;
-}
-
-.NuitPRR{
-  align-items: flex-end;
-}
-
-.valentinePRR {
-  background-color: rgba(84, 6, 73, 0.45);
-}
-.valentinePRR .lists .list svg {
-  color: rgb(244, 139, 250);
-}
-.valentinePRR .action {
-  background-color: rgb(244, 139, 250);
-}
-.valentinePRR .action:hover {
-  background-color: rgb(194, 84, 190);
-}
-
-.FunPRR{
-  background-color: rgba(63, 64, 6, 0.45);
-}
-.FunPRR .lists .list svg {
-  color: rgb(236, 236, 67);
-}
-.FunPRR .action {
-  background-color: rgb(236, 236, 67);
-}
-.FunPRR .action:hover {
-  background-color: rgb(202, 202, 41);
-}
-
-.LowCostPRR{
-  background-color: rgba(24, 135, 39, 0.253);
-}
-.LowCostPRR .lists .list svg {
-  color: rgb(41, 194, 62);
-}
-.LowCostPRR .action {
-  background-color: rgb(41, 194, 62);
-}
-.LowCostPRR .action:hover {
-  background-color: rgb(28, 158, 45);
-}
-
+ }
+ 
+ #check:checked ~ .checkmark {
+  background-color: #08bb68;
+ }
+ 
+ .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+  opacity: 0;
+  transition: all 0.4s;
+ }
+ 
+ #check:checked ~ .checkmark::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
+ }
 /* ADMIN MODE */
 
 .ADMINMODEBUTTON{
@@ -1293,7 +1321,7 @@ footer{
   width: 50%;
   margin: 1%;
   border-radius: 30px;
-  box-shadow: 0px 0px 5px white;
+  box-shadow: 0px 0px 5px rgb(50, 50, 50);
 }
 
 /* contact */

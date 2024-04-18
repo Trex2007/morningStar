@@ -12,9 +12,14 @@
         $template = "Views/Epopee.php";
         require_once("views/base.php");
     } elseif ($uri === "/Chambres" || $uri === "/BedRooms"){
-        $title = "Chambres";
-        $template = "Views/chambres.php";
-        require_once("views/base.php");
+        if(isset($_SESSION['user'])){
+            $title = "Chambres";
+            $template = "Views/chambres.php";
+            require_once("views/base.php");
+        } else{
+            header("location:/login");
+        }
+        
     } elseif ($uri === "/contact" || $uri === "/ContacterNous"){
         $title = "Contact";
         $template = "Views/contact.php";
