@@ -1357,9 +1357,6 @@ s .editProfInput:hover {
 
 /* #endregion*/
 /* #region scroll bar */
-tg
-
-
 ::-webkit-scrollbar {
   width: 10px;
 }
