@@ -1,51 +1,24 @@
 <form action="" method="POST">
-    <div class="reservations">
-        <h1>Reserver</h1>
+    <div class="reservationsChambre">
+        <h1>Reserveation d'une chambre</h1>
         <div class="flex inteRes">
             <img src="../assets/images/Chambre.png" alt="image de la chambre">
             <div>
                 <h1>Nom de la chambre : Suite Luxueuse</h1>
-                <p>Description : Cette suite luxueuse comprend un grand lit king size, une salle de bains privée avec baignoire et douche, un coin salon avec canapé et fauteuils, et une vue imprenable sur la ville. Les clients de la suite luxueuse ont également accès à notre bar, notre piscine, notre restaurant, notre cinéma et notre jardin.</p>
+                <p>Description : Cette suite luxueuse comprend un grand lit king size, une salle de bains privée avec baignoire et douche, un coin salon avec canapé et fauteuils, et une vue imprenable sur la ville.</p>
                 <h2>Options disponibles :</h2>
-                <div class="flex checkBoxChambres">
 
-                    <input type="checkbox" id="checkBar" name="checkBar" hidden="">
-                    <label for="checkBar" class="checkmark"></label>
-
-                    <p class="texteChoix">Bar</p>
-                </div>
-                <div class="flex checkBoxChambres">
-                    <input type="checkbox" id="checkPiscine" name="checkPiscine" hidden="">
-                    <label for="checkPiscine" class="checkmark"></label>
-                    <p class="texteChoix">Piscine</p>
-                </div>
-                <div class="flex checkBoxChambres">
-                    <input type="checkbox" id="chechResto" name="chechResto" hidden="">
-                    <label for="chechResto" class="checkmark"></label>
-                    <p class="texteChoix">Restaurant</p>
-                </div>
-                <div class="flex checkBoxChambres">
-                    <input type="checkbox" id="checkCine" name="checkCine" hidden="">
-                    <label for="checkCine" class="checkmark"></label>
-                    <p class="texteChoix">Cinema</p>
-                </div>
-                <div class="flex checkBoxChambres">
-                    <input type="checkbox" id="checkJardin" name="checkJardin" hidden="">
-                    <label for="checkJardin" class="checkmark"></label>
-                    <p class="texteChoix">Jardin</p>
-                </div>
-                <div class="flex checkBoxChambres">
-                    <input type="checkbox" id="checkPenthouse" name="checkPenthouse" hidden="">
-                    <label for="checkPenthouse" class="checkmark"></label>
-                    <p class="texteChoix">Penthouse</p>
-                </div>
+                <select name="options[]" id="options-select" multiple>
+                    <?php foreach ($options as $option) : ?>
+                        <option value="<?= $option->optID ?>"><?= $option->optDesc ?></option>
+                    <?php endforeach ?>
+                </select>
+                <input type="date" placeholder="deb" id="resDateDeb" name="resDateDeb" class="editProfInput" required>
+                <input type="date" placeholder="fin" id="resDateFin" name="resDateFin" class="editProfInput" required>
             </div>
         </div>
-        <input type="date" placeholder="deb" id="resDateDeb" name="resDateDeb" class="editProfInput" required>
-        <input type="date" placeholder="fin" id="resDateFin" name="resDateFin" class="editProfInput" required>
-
-        <div class="btn-conteiner" id="reservCr" value="reservCr" name="reservCr">
-            <a class="btn-content" href="/createReservation">
+        <div class="btn-conteiner">
+            <button class="btn-content" id="reservCr" value="reservCr" name="reservCr">
                 <span class="btn-title">Réserver</span>
                 <span class="icon-arrow">
                     <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -56,7 +29,7 @@
                         </g>
                     </svg>
                 </span>
-            </a>
+            </button>
         </div>
     </div>
 </form>

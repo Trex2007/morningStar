@@ -1,6 +1,7 @@
 <?php
 
-    require_once("Models/userModel.php");
+    require_once ("Models/userModel.php");
+    require_once ("models/reservationsModel.php");
 
     $uri = $_SERVER['REQUEST_URI'];
 
@@ -30,10 +31,15 @@
         $title = "Register";
         $template = "Views/Users/register.php";
         require_once("views/baseLog.php");
-    } elseif ($uri === "/profile" || $uri === "/profil"){
-        $users = SelectAllUsers($pdo);
+    } elseif ($uri === "/profile" || $uri === "/profil"){            
 
         if(isset($_SESSION['user'])){
+            if ($_SESSION["user"]->userPerm === "own"){
+                $reservationsAll = selectAllReservations($pdo);
+                $users = SelectAllUsers($pdo);
+            } else{
+                $reservations = selectMyReservations($pdo);
+            }
 
             if(isset($_POST['edit-button'])){
                 $messageError = verifEmptyData();

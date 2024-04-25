@@ -34,6 +34,7 @@
   --prenomEdit: relative;
   --prenomEditInv: none;
 }
+
 /* #endregion*/
 /* #region Menu */
 .menu {
@@ -229,6 +230,7 @@
   transition-duration: 400ms;
   transition-property: width, left;
 }
+
 /* #endregion*/
 /* #region Body (toute la page) */
 
@@ -238,6 +240,7 @@ body {
   margin: 0;
   color: var(--ecriture);
 }
+
 /* #endregion*/
 /* #region Header (haut de page) */
 
@@ -267,6 +270,7 @@ header {
   right: 0;
   margin: 0% 1% 0% 0.5%;
 }
+
 /* #endregion*/
 /* #region main */
 
@@ -327,8 +331,10 @@ main {
 .barRight a {
   color: white;
 }
+
 /* #endregion*/
 /* #region button reserver */
+
 .reserver {
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -405,6 +411,7 @@ main {
     left: 100%;
   }
 }
+
 /* #endregion*/
 /* #region epopee*/
 
@@ -470,6 +477,7 @@ main {
   font-size: large;
   margin: 1% 3% 1% 3%;
 }
+
 /* #endregion*/
 /* #region footer */
 footer {
@@ -478,6 +486,7 @@ footer {
   width: 100%;
   text-align: right;
 }
+
 /* #endregion*/
 /* #region menu deroulant */
 #checkboxmenu {
@@ -619,6 +628,7 @@ footer {
     transform: translateX(1.4em)
   }
 }
+
 /* #endregion*/
 /* #region video */
 
@@ -886,6 +896,14 @@ footer {
   padding: 1%;
 }
 
+.reservationsUsers {
+  width: 50%;
+  background-color: #0000004b;
+  margin: 5% 0% 0 1%;
+  border-radius: 35px;
+  padding: 1%;
+}
+
 .reservations h1 {
   margin: 0%;
 }
@@ -1080,14 +1098,30 @@ s .editProfInput:hover {
   overflow-y: scroll;
 }
 
+.reservationCoteUsers {
+  width: 100%;
+  height: 500px;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
 .reservationCase {
 
-  width: 29%;
+  width: 46%;
   margin: 1%;
-  height: 350px;
+  height: 400px;
   background-color: #ffffff1a;
   border-radius: 20px;
-  padding: 1%;
+  padding: 1% 1% 2% 1%;
+}
+.reservationCaseUsers {
+  width: 46%;
+  margin: 1%;
+  height: 385px;
+  background-color: #ffffff1a;
+  border-radius: 20px;
+  padding: 1% 1% 2% 1%;
 }
 
 .reservationCase h2 {
@@ -1099,22 +1133,37 @@ s .editProfInput:hover {
   width: 100%;
   border-radius: 20px;
 }
-
-.listecoche {
+.reservationCaseUsers img {
   width: 100%;
+  border-radius: 20px;
+}
+
+.listeCoche {
+  width: 49%;
+}
+
+.listeDoubeCoche {
+  width: 2%;
+  margin: 0 5px 0 5px;
 }
 
 /* #endregion*/
 /* #region reservations */
 
-.reservations {
+.reservationsChambre{
   width: 90%;
-  height: 90%;
-  margin: 5%;
+  background-color: #0000004b;
+  padding: 1%;
+  border-radius: 30px;
+  height: 80%;
+  position: fixed;
+}
+.reservationsChambre h1{
+  margin: 1%;
 }
 
 .inteRes img {
-  width: 200%;
+  width: 150%;
   margin: 1%;
   border-radius: 30px;
   box-shadow: 0px 0px 3px white;
@@ -1126,14 +1175,16 @@ s .editProfInput:hover {
 
 .btn-conteiner {
   display: flex;
-  justify-content: right;
+  justify-content: end;
+  align-items: end;
   --color-text: black;
   --color-background: #f2d218;
-  --color-outline: #ff145b80;
+  --color-outline: #00000080;
   --color-shadow: #00000080;
 }
 
 .btn-content {
+  color: black;
   display: flex;
   align-items: center;
   padding: 5px 30px;
@@ -1229,42 +1280,6 @@ s .editProfInput:hover {
     outline: 0.2em solid var(--color-background);
     outline-offset: 0;
   }
-}
-
-.checkmark {
-  top: 13px;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: #ddd;
-  border-radius: 10px;
-  position: relative;
-  transition: background-color 0.4s;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.checkBoxChambres input:checked~.checkmark {
-  background-color: #08bb68;
-}
-
-.checkmark::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 10px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
-  opacity: 0;
-  transition: all 0.4s;
-}
-
-.checkBoxChambres input:checked~.checkmark::after {
-  opacity: 1;
-  transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
 }
 
 /* #endregion*/
