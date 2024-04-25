@@ -1115,6 +1115,7 @@ s .editProfInput:hover {
   border-radius: 20px;
   padding: 1% 1% 2% 1%;
 }
+
 .reservationCaseUsers {
   width: 46%;
   margin: 1%;
@@ -1133,6 +1134,7 @@ s .editProfInput:hover {
   width: 100%;
   border-radius: 20px;
 }
+
 .reservationCaseUsers img {
   width: 100%;
   border-radius: 20px;
@@ -1150,7 +1152,7 @@ s .editProfInput:hover {
 /* #endregion*/
 /* #region reservations */
 
-.reservationsChambre{
+.reservationsChambre {
   width: 90%;
   background-color: #0000004b;
   padding: 1%;
@@ -1158,7 +1160,8 @@ s .editProfInput:hover {
   height: 80%;
   position: fixed;
 }
-.reservationsChambre h1{
+
+.reservationsChambre h1 {
   margin: 1%;
 }
 
