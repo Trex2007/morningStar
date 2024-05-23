@@ -8,13 +8,13 @@
                 <p>Description : Cette suite luxueuse comprend un grand lit king size, une salle de bains privée avec baignoire et douche, un coin salon avec canapé et fauteuils, et une vue imprenable sur la ville.</p>
                 <h2>Options disponibles :</h2>
 
-                <select name="options[]" id="options-select" multiple>
+                <select name="options[]" id="options-select" class="reservationSelect chbrres" multiple>
                     <?php foreach ($options as $option) : ?>
                         <option value="<?= $option->optID ?>"><?= $option->optDesc ?></option>
                     <?php endforeach ?>
                 </select>
-                <input type="date" placeholder="deb" id="resDateDeb" name="resDateDeb" class="editProfInput" required>
-                <input type="date" placeholder="fin" id="resDateFin" name="resDateFin" class="editProfInput" required>
+                <input type="date" placeholder="deb" id="resDateDeb" name="resDateDeb" class="editProfInput chbrres" required>
+                <input type="date" placeholder="fin" id="resDateFin" name="resDateFin" class="editProfInput chbrres" required>
             </div>
         </div>
         <div class="btn-conteiner">

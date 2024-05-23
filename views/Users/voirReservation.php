@@ -1,0 +1,1 @@
+<input type="text" placeholder="resID" id="resID" name="resID" value="<?php if (isset($resID)) : ?><?= $reservation->resID; ?> <?php endif; ?>" required>

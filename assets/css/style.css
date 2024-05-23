@@ -1152,6 +1152,45 @@ s .editProfInput:hover {
 /* #endregion*/
 /* #region reservations */
 
+.reservationSelect {
+  display: block;
+  width: 228px;
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #292929;
+  padding: 0px 12px;
+  outline: none;
+  caret-color: rgb(223, 189, 22);
+  color: rgb(212, 212, 212);
+  font-size: 12px;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+s .reservationSelect:hover {
+  border: 2px solid rgb(138, 120, 29);
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+
+.reservationSelect:focus {
+  border: 2px solid rgb(223, 189, 22);
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+
+.reservationSelect option:checked {
+  border: 2px solid rgb(223, 189, 22);
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  border-radius: 5px;
+  background-color: #292929;
+  color: rgb(212, 212, 212);
+}
+
+.chbrres{
+  margin: 2%;
+}
+
 .reservationsChambre {
   width: 90%;
   background-color: #0000004b;
