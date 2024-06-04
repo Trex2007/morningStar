@@ -283,11 +283,13 @@ main {
 .leftHome {
   margin: 1%;
   width: 50%;
+  transition: all 0.3s;
 }
 
 .rightHome {
   margin: 1%;
   width: 50%;
+  transition: all 0.3s;
 }
 
 .CasesHome {
@@ -871,6 +873,10 @@ footer {
 
 /* #endregion*/
 /* #region Profil */
+
+.profile{
+  transition: all 0.3s;
+}
 .editProfile {
   margin-top: 5%;
   width: 90%;
@@ -878,6 +884,7 @@ footer {
   border-radius: 35px;
   padding: 1% 1% 1% 1.5%;
   height: 100%;
+  transition: all 0.3s;
 }
 
 .editOne h1 {
@@ -1107,7 +1114,6 @@ s .editProfInput:hover {
 }
 
 .reservationCase {
-
   width: 46%;
   margin: 1%;
   height: 400px;
@@ -1123,6 +1129,7 @@ s .editProfInput:hover {
   background-color: #ffffff1a;
   border-radius: 20px;
   padding: 1% 1% 2% 1%;
+  transition: all 0.3s;
 }
 
 .reservationCase h2 {
@@ -1154,7 +1161,8 @@ s .editProfInput:hover {
 
 .reservationSelect {
   display: block;
-  width: 228px;
+  height: 33%;
+  width: 95%;
   background-color: #292929;
   border-radius: 10px;
   border: 2px solid #292929;
@@ -1162,7 +1170,7 @@ s .editProfInput:hover {
   outline: none;
   caret-color: rgb(223, 189, 22);
   color: rgb(212, 212, 212);
-  font-size: 12px;
+  font-size: 15px;
   -webkit-transition-duration: .2s;
   transition-duration: .2s;
 }
@@ -1192,12 +1200,11 @@ s .reservationSelect:hover {
 }
 
 .reservationsChambre {
-  width: 90%;
+  width: 99%;
   background-color: #0000004b;
   padding: 1%;
   border-radius: 30px;
-  height: 80%;
-  position: fixed;
+  height: 100%;
 }
 
 .reservationsChambre h1 {
@@ -1349,12 +1356,12 @@ s .reservationSelect:hover {
 
 /* #endregion*/
 /* #region medias */
-
 .medias img {
   width: 50%;
   margin: 1%;
   border-radius: 30px;
   box-shadow: 0px 0px 5px rgb(50, 50, 50);
+  transition: all 0.3s;
 }
 
 /* #endregion*/
@@ -1377,43 +1384,8 @@ s .reservationSelect:hover {
 }
 
 /* #endregion*/
-/* #region Responsive */
-
-@media screen and (max-width: 1000px) {
-  .slider {
-    top: 50%;
-    left: -25%;
-    right: 25%;
-    bottom: -50%;
-  }
-
-  .headCenter h1 {
-    position: relative;
-    left: -2%;
-  }
-
-  .mineBas {
-    bottom: 3px;
-  }
-
-  .PreEdith3 {
-    margin: 0% 0.5% 0 -15px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .loader {
-    width: 300px;
-    height: 300px;
-  }
-
-  .loader::before {
-    inset: 30px;
-  }
-}
-
-/* #endregion*/
 /* #region scroll bar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -1428,6 +1400,117 @@ s .reservationSelect:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #d6cc0f;
+}
+
+/* #endregion*/
+/* #region Modif Reservations */
+
+.resPreview{
+  width: 100%;
+  background-color: #ffffff1a;
+  padding: 1%;
+  border-radius: 50px;
+}
+.resPreview h3{
+  margin-left: 1%;
+}
+.resPreview input{
+  margin-left: 2%;
+}
+.reservCote{
+  margin: 2% 5% 1% 5%;
+}
+.resIDClass{
+  margin-left: 2%;
+  color:rgb(204, 0, 0);
+  font-size: xx-large;
+}
+.resPreviewMore{
+  width: 50%;
+  margin: 0 1% 0 1%;
+  background-color: #0000001a;
+  padding: 1%;
+  border-radius: 50px;
+}
+
+.reservationSelectEdit {
+  width: 95%;
+  height: 67%;
+  border-radius: 40px;
+  padding: 3%;
+  font-size: 15px;
+}
+
+/* #endregion */
+/* #region Responsive */
+
+@media screen and (max-width: 1550px) {
+  .profile {
+    display: block;
+  }
+  .editProfile{
+    width: 95%;
+    margin: 2%;
+  }
+  .reservationsUsers{
+    width: 95%;
+    margin: 2%;
+  }
+  .reservationCaseUsers{
+    height: 115%;
+  }
+
+  .inteRes{
+    display: block;
+  }
+  .inteRes img{
+    width: 98%;
+  }
+  .reservationsChambre{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .reservationCaseUsers{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .slider {
+    top: 50%;
+    left: -25%;
+    right: 25%;
+    bottom: -50%;
+  }
+
+  .headCenter h1 {
+    position: relative;
+    left: -2%;
+  }
+
+  .maincases{
+    display: block;
+  }
+  .leftHome{
+    margin: 0 6% 0 6%;
+    width: 89%;
+  }
+  .rightHome{
+    margin: 0 6% 0 6%;
+    width: 89%;
+  }
+  .medias{
+    display:block;
+  }
+  .medias img{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reservationCaseUsers{
+    height: 75%;
+  }
+
 }
 
 /* #endregion*/

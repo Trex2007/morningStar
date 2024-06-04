@@ -103,7 +103,7 @@ function selectOptionsActiveReservation($pdo)
 function updateReservation($dbh)
 {
     try {
-        $query = 'UPDATE reservation set resDateDeb = :resDateDeb, resDateFin = :resDateFin where resID = : resID';
+        $query = 'UPDATE reservations set resDateDeb = :resDateDeb, resDateFin = :resDateFin where resID = :resID';
         $updateReservationFromID = $dbh->prepare($query);
         $updateReservationFromID->execute([
             'resDateDeb' => $_POST['resDateDeb'],
@@ -131,7 +131,7 @@ function deleteOptionReservation($dbh)
 function deleteOneReservation($pdo)
 {
     try {
-        $query = 'DELETE from reservation where resID = :resID';
+        $query = 'DELETE from reservations where resID = :resID';
         $deleteAllReservationsFromId = $pdo->prepare($query);
         $deleteAllReservationsFromId->execute([
             'resID' => $_GET['resID']

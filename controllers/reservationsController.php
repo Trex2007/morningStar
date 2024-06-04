@@ -27,28 +27,25 @@ if ($uri === "/Chambres" || $uri === "/BedRooms") {
     require_once("views/base.php");
 } elseif (isset($_GET["resID"]) && str_starts_with($uri, "/voirReservation")) {
     $reservation = selectOneReservation($pdo);
-    $options = selectOptionsActiveReservation($pdo);
-    $title = "Vôtre réservation";
-    $template = "views/Users/voirReservation.php";
-    require_once("views/base.php");
-} else if (isset($_GET["resID"]) && str_starts_with($uri, "/updateReservation")) {
-    if (isset($_POST['BUTTON'])) { // RAJOUTER LE NOM DU 'BUTTON' !! 
+    $options = selectAllOptions($pdo);
+    $optionsActiveReservation = selectOptionsActiveReservation($pdo);
+    
+    if (isset($_POST['edit-button-Res'])) { 
         updateReservation($pdo);
         deleteOptionReservation($pdo);
         for ($i = 0; $i < count($_POST["options"]); $i++) {
             $optionReservationID = $_POST["options"][$i];
-            ajouteOptionReservation($pdo, $_GET["resID"], $optionReservationID);
+            ajouteOptionReservation($pdo, $reservation->resID, $optionReservationID);
         }
-        header("location:/MaReservations");
+        header("location:/voirReservation?resID=$reservation->resID");
     }
-    $reservation = selectOneReservation($pdo);
-    $optionsActiveReservation = selectOptionsActiveReservation($pdo);
-    $options = selectAllOptions($pdo);
-    $title = "Mise a jour de vôtre réservation";
-    $template = "Views/Schools/voirReservation.php";
-    require_once("Views/base.php");
-} elseif (isset($_GET["resID"]) && str_starts_with($uri, "/deleteReservation")) {
-    deleteOptionReservation($pdo);
-    deleteOneReservation($pdo);
-    header("location:/MaReservations");
+    else if (isset($_POST['suprr-Res'])) { 
+        deleteOptionReservation($pdo);
+        deleteOneReservation($pdo);
+        header("location:/profile");
+    }
+
+    $title = "Vôtre réservation";
+    $template = "views/Users/voirReservation.php";
+    require_once("views/base.php");
 }

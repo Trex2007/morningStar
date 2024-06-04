@@ -1,6 +1,6 @@
 <form action="" method="POST">
     <div class="reservationsChambre">
-        <h1>Reserveation d'une chambre</h1>
+        <h1>Reservation d'une chambre</h1>
         <div class="flex inteRes">
             <img src="../assets/images/Chambre.png" alt="image de la chambre">
             <div>
@@ -13,8 +13,11 @@
                         <option value="<?= $option->optID ?>"><?= $option->optDesc ?></option>
                     <?php endforeach ?>
                 </select>
+                <h2>Date de debut :</h2>
                 <input type="date" placeholder="deb" id="resDateDeb" name="resDateDeb" class="editProfInput chbrres" required>
+                <h2>Date de fin :</h2>
                 <input type="date" placeholder="fin" id="resDateFin" name="resDateFin" class="editProfInput chbrres" required>
+
             </div>
         </div>
         <div class="btn-conteiner">
